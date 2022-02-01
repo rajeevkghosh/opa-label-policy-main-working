@@ -7,7 +7,7 @@ metadata:
     application_name: app1
     application_role: web
     au: test
-    created: ""
+    created: "20220202"
     environment: prod
     gcp_region: us
     owner: hybridenv
@@ -20,7 +20,7 @@ spec:
       au: test
       created: ""
       environment: prod
-      gcp_region: us
+      gcp_region: uk-abc
       owner: hybridenv
   replicas: 3
   template:
@@ -32,7 +32,7 @@ spec:
         au: test
         created: ""
         environment: prod
-        gcp_region: us
+        gcp_region: uk-abc
         owner: hybridenv
     spec:
       containers:

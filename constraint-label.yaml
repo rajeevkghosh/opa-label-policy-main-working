@@ -24,12 +24,18 @@ spec:
   parameters:
     labels:
       - key: "gcp_region"
+        allowedRegex: "^us$"
       - key: "owner"
+        allowedRegex: "^hybridenv$"
       - key: "application_division"
+        allowedRegex: "^pci$|^paa$|^hdpa$|^hra$"
       - key: "application_name"
       - key: "application_role"
+        allowedRegex: "^app$|^web$|^auth$|^data$"
       - key: "environment"
+        allowedRegex: "^prod$|^int$|^uat$|^stage$|^dev$|^test$"
       - key: "au"
       - key: "created"
+        allowedRegex: "^\\d{4}(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])$"
     message: "Deployment objects should have required labels"
 # [END anthos_config_management_ci_app_deployment_must_have_owner]

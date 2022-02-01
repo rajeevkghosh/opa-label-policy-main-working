@@ -3,16 +3,37 @@ kind: Deployment
 metadata:
   name: nginx-deployment
   labels:
-    app: nginx
+    application_division: pci
+    application_name: app1
+    application_role: web
+    au: test
+    created: ""
+    environment: prod
+    gcp_region: uk
+    owner: hybridenv
 spec:
   selector:
     matchLabels:
-      app: nginx
+      application_division: pci
+      application_name: app1
+      application_role: web
+      au: test
+      created: ""
+      environment: prod
+      gcp_region: uk
+      owner: hybridenv
   replicas: 3
   template:
     metadata:
       labels:
-        app: nginx
+        application_division: pci
+        application_name: app1
+        application_role: web
+        au: test
+        created: ""
+        environment: prod
+        gcp_region: uk
+        owner: hybridenv
     spec:
       containers:
       - name: nginx
